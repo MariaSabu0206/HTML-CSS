@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Task</title>
+
+    <style>
+        .head {
+            text-align: center;
+        }
+
+        .parent-div {
+            display: flex;
+            align-items: center;
+            margin-left: 400px;
+        }
+
+        .alphabet-container {
+            padding: 5px 10px;
+            width: 20%;
+            border: 3px solid rgb(37, 147, 186);
+            border-radius: 6%;
+
+        }
+
+        .row1,
+        .row2,
+        .row3 {
+            display: flex;
+            margin: 3px;
+        }
+
+        .letters {
+            width: 100px;
+            margin: 2px 10px;
+            border: 1.5px solid rgb(13, 14, 14);
+            border-radius: 10%;
+            background-color: rgb(194, 189, 189);
+
+
+        }
+
+        .letters p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .letter-col {
+            width: 5%;
+            height: 162px;
+
+            margin: 5%;
+        }
+
+        .alphabet-container2 {
+            padding: 10px 12px;
+            width: 5%;
+            height: 167px;
+            border: 3px solid rgb(37, 147, 186);
+            border-radius: 5%;
+            margin: 0px 20px;
+
+
+        }
+
+        .colletters {
+            width: 54px;
+            text-align: center;
+            border: 1.5px solid rgb(13, 14, 14);
+            border-radius: 10%;
+            background-color: rgb(194, 189, 189);
+            margin: 4px
+        }
+
+        .colletters p {
+            font-weight: bold;
+        }
+
+        section {
+            display: flex;
+            margin-left: 690px;
+        }
+        .desktop
+        {
+            margin-right: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="head">Learn <span style="color: red;">Flexbox</span></h1>
+    <h1 class="head">Build 5 <span style="color: red;">Responsive Layouts</span></h1>
+    <div class="parent-div">
+        <div class="image">
+            <img src="data:image/jpeg;base64,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"
+                alt="">
+        </div>
+
+        <div class="alphabet-container">
+            <div class="row1">
+                <div class="letters">
+                    <p>A</p>
+                </div>
+                <div class="letters">
+                    <p>B</p>
+                </div>
+                <div class="letters">
+                    <p>C</p>
+
+                </div>
+            </div>
+            <div class="row2">
+                <div class="letters">
+                    <p>D</p>
+                </div>
+                <div class="letters">
+                    <p>E</p>
+                </div>
+                <div class="letters">
+                    <p>F</p>
+
+                </div>
+            </div>
+            <div class="row3">
+                <div class="letters">
+                    <p>G</p>
+                </div>
+                <div class="letters">
+                    <p>H</p>
+                </div>
+                <div class="letters">
+                    <p>I</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="alphabet-container2">
+            <div class="col">
+                <div class="colletters">
+                    <p>A</p>
+                </div>
+                <div class="colletters">
+                    <p>B</p>
+                </div>
+                <div class="colletters">
+                    <p>C</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <section class="end-title">
+        <h2 class="desktop">Desktop</h2>
+        <h2 class="mobile">Mobile</h2>
+    </section>
+</body>
+
+</html>
